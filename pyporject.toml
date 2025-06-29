@@ -1,0 +1,17 @@
+[project]
+name = "comfyui-elevenlabs-integrtion" # Unique identifier for your node. Immutable after creation.
+description = "This project integrates the ElevenLabs Text-to-Speech API as a custom node for ComfyUI. It enables seamless text-to-speech conversion directly within ComfyUI, providing the generated audio as a PyTorch tensor for immediate playback or further processing. Ideal for workflows requiring high-quality speech synthesis"
+version = "0.0.1" # Custom Node version. Must be semantically versioned.
+license = { file = "LICENSE.txt" }
+dependencies  = [
+    "elevenlabs",
+    "soundfile"
+]
+
+[project.urls]
+Repository = "https://github.com/sysL-padawan/comfyui-elevenlabs-integration"
+
+[tool.comfy]
+PublisherId = "aoliao"
+DisplayName = "ComfyUI ElevenLabs API integration" # Display name for the Custom Node. Can be changed later.
+Icon = "https://cdn.buymeacoffee.com/uploads/profile_pictures/2025/06/zg0A5lEwktJOZ2qr.png@300w_0e.webp" # SVG, PNG, JPG or GIF (MAX. 800x400px)

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv
+env/
+venv/
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ComfyUI/Node
+*.log
+*.tmp
+*.bak
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Jetbrains IDE
+.idea
