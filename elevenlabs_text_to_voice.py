@@ -5,7 +5,7 @@ import torch
 from elevenlabs import ElevenLabs
 
 
-class ElevenlabsRequestNode:
+class ElevenlabsTextToVoice:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -15,16 +15,14 @@ class ElevenlabsRequestNode:
                 "voice_id": ("STRING", {"default": ""}),
                 "model_id": ("STRING", {"default": "eleven_multilingual_v2"}),
             },
-            "optional": {
-                "output_format": ("STRING", {"default": "mp3_44100_128"}),
-            }
+            "optional": {}
         }
 
     RETURN_TYPES = ("AUDIO",)
     RETURN_NAMES = ("audio",)
 
     FUNCTION = "do_request"
-    CATEGORY = "Custom"
+    CATEGORY = "Elevenlabs API integration by 奥利奥"
 
     def do_request(self, api_key, text, voice_id, model_id, output_format="mp3_44100_128"):
         client = ElevenLabs(api_key=api_key)
