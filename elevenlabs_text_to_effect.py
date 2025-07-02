@@ -14,11 +14,11 @@ class ElevenlabsTextToEffect:
                 "api_key": ("STRING", {"default": ""}),
             },
             "optional": {
-                "output_format": ("STRING", {"default": "mp3_44100_128"}),
                 "duration": ("FLOAT", {
-                    "min" : 0.5,
+                    "min" : 1,
                     "max" : 22.0,
-                    "step" : 0.1
+                    "step" : 0.1,
+                    "default" : 3,
                 }),
                 "prompt_influence": ("FLOAT", {
                     "min" : 0,
@@ -32,7 +32,7 @@ class ElevenlabsTextToEffect:
     RETURN_NAMES = ("audio",)
 
     FUNCTION = "do_request"
-    CATEGORY = "Custom"
+    CATEGORY = "Elevenlabs API integration by 奥利奥"
 
     def do_request(self, api_key, text, duration, prompt_influence, output_format="mp3_44100_128"):
         client = ElevenLabs(api_key=api_key)
@@ -40,7 +40,7 @@ class ElevenlabsTextToEffect:
             output_format=output_format,
             text=text,
             prompt_influence=prompt_influence,
-            duration=duration,
+            duration_seconds=duration,
         )
 
         audio_bytes = b"".join(audio_gen)
