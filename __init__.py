@@ -1,7 +1,7 @@
-from .elevenlabs_request_node import ElevenlabsRequestNode
+
 
 NODE_CLASS_MAPPINGS = {
-    "ElevenlabsRequestNode": ElevenlabsRequestNode,
+    "ElevenlabsTextToVoice": Elv,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {

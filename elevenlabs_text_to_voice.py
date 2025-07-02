@@ -5,7 +5,7 @@ import torch
 from elevenlabs import ElevenLabs
 
 
-class ElevenlabsRequestNode:
+class ElevenlabsTextToVoice:
     @classmethod
     def INPUT_TYPES(cls):
         return {
