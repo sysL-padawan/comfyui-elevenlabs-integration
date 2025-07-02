@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-elevenlabs-integrtion" # Unique identifier for your node. Immutable after creation.
 description = "This project integrates the ElevenLabs Text-to-Speech API as a custom node for ComfyUI. It enables seamless text-to-speech conversion and includes the text-to-audio effect endpoint, delivering the generated audio as a PyTorch tensor for immediate playback or further processing. Perfect for workflows that need high-quality, natural-sounding speech synthesis"
-version = "0.1.1" # Custom Node version. Must be semantically versioned.
+version = "0.1.2" # Custom Node version. Must be semantically versioned.
 license = { file = "LICENSE.txt" }
 dependencies  = [
     "elevenlabs",
