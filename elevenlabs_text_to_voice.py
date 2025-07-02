@@ -15,7 +15,7 @@ class ElevenlabsTextToVoice:
                 "voice_id": ("STRING", {"default": ""}),
                 "model_id": ("STRING", {"default": "eleven_multilingual_v2"}),
             },
-π            "optional": {}
+            "optional": {}
         }
 
     RETURN_TYPES = ("AUDIO",)
