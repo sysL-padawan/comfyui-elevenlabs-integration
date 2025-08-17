@@ -27,13 +27,20 @@ Finally, restart ComfyUI.
 
 Currently, there is one node for text-to-speech with ElevenLabs.
 
-### ElevenlabsTextToVoice
+### ElevenlabsTextToSpeech
 
 - **api_key**: Your ElevenLabs API key
 - **voice_id**: The voice ID from ElevenLabs
 - **model_id**: The desired model (e.g. `eleven_multilingual_v2`)
 - **text**: The text to be spoken
 - **output_format**: Optional, e.g. `mp3_44100_128` (default)
+- **seed**: Optional, for reproducible results
+- **apply_text_normalization**: Optional, choose between `auto`, `on`, or `off`
+- **voice_settings_stability**: Optional, float (0.0–1.0), controls emotional range
+- **voice_settings_use_speaker_boost**: Optional, boolean, boosts similarity to original speaker
+- **voice_settings_similarity_boost**: Optional, float (0.0–1.0), how closely to match the original voice
+- **voice_settings_style**: Optional, float (0.0–1.0), amplifies speaker style
+- **voice_settings_speed**: Optional, float (0.5–2.0), adjusts speech speed
 
 The node returns an audio tensor and the sample rate, which can be used directly for e.g. LipSync.
 
@@ -65,4 +72,3 @@ The node returns an audio tensor and the sample rate, which can be used directly
 ## Credits
 - [ElevenLabs](https://elevenlabs.io/)
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
-
